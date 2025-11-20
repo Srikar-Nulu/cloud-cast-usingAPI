@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 100% 97%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 95% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 200 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 210 100% 50%;
+
+    --radius: 1rem;
+
+    /* Weather-specific colors */
+    --weather-sky-start: 210 100% 65%;
+    --weather-sky-end: 200 100% 45%;
+    --weather-sunset-start: 25 100% 60%;
+    --weather-sunset-end: 340 100% 65%;
+    --weather-glass: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-sky: linear-gradient(135deg, hsl(var(--weather-sky-start)), hsl(var(--weather-sky-end)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--weather-sunset-start)), hsl(var(--weather-sunset-end)));
+    
+    /* Shadows */
+    --shadow-soft: 0 8px 32px hsla(210, 100%, 50%, 0.1);
+    --shadow-glass: 0 8px 32px hsla(0, 0%, 0%, 0.05);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 28% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 28% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 28% 20%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 90% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 28% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 25%;
+    --input: 215 28% 25%;
+    --ring: 210 100% 60%;
+    
+    --weather-sky-start: 210 80% 35%;
+    --weather-sky-end: 200 80% 30%;
+    --weather-sunset-start: 25 90% 40%;
+    --weather-sunset-end: 340 90% 45%;
+    --weather-glass: 215 28% 25%;
+    
+    --gradient-sky: linear-gradient(135deg, hsl(var(--weather-sky-start)), hsl(var(--weather-sky-end)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--weather-sunset-start)), hsl(var(--weather-sunset-end)));
+    
+    --shadow-soft: 0 8px 32px hsla(0, 0%, 0%, 0.3);
+    --shadow-glass: 0 8px 32px hsla(0, 0%, 0%, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
